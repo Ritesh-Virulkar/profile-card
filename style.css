@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --ff-kumbh-sans: "Kumbh Sans", sans-serif;
+
+  --fs-primary: 1.125rem;
+
+  --clr-p-dark-cyan: hsl(185, 75%, 39%);
+  --clr--p-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --clr-p-dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --clr-n-dark-gray: hsl(0, 0%, 59%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+}
+.container {
+  position: relative;
+  font-size: var(--fs-primary);
+  background-color: var(--clr-p-dark-cyan);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  z-index: -3;
+  overflow: hidden;
+  font-family: var(--ff-kumbh-sans);
+  margin: auto;
+}
+.container > .top-corner-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-250px, -500px) scale(1) rotate(0deg);
+  z-index: -1;
+}
+.container > .bottom-corner-svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(200px, 600px) scale(1) rotate(45deg);
+  z-index: -1;
+}
+.profile-card {
+  position: relative;
+  width: 460px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.profile-card > .profile-bg-image {
+  width: 100%;
+}
+.profile-card > .avatar-img {
+  border: 7px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  margin: 130px;
+}
+.name-age {
+  margin-top: 90px;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+.name,
+.age {
+  font-size: 1.5rem;
+}
+.name {
+  color: var(--clr--p-very-dark-desaturated-blue);
+  font-weight: 700;
+}
+.age {
+  color: var(--clr-n-dark-gray);
+}
+.city {
+  color: var(--clr-n-dark-gray);
+  margin-top: 1rem;
+}
+li {
+  list-style: none;
+}
+.info {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  padding: 25px;
+  justify-content: space-evenly;
+  border-top: 1px solid var(--clr-p-dark-grayish-blue);
+}
+.follow,
+.likes,
+.photos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.follow .number,
+.likes .number,
+.photos .number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr--p-very-dark-desaturated-blue);
+}
+
+.follow p,
+.likes p,
+.photos p {
+  text-align: center;
+  color: var(--clr-n-dark-gray);
+  font-size: 1rem;
+}
+@media (max-width: 460px) {
+  .profile-card {
+    width: 90%;
+    height: 50%;
+  }
+  .profile-card .avatar-img {
+    position: absolute;
+    margin-top: 28%;
+  }
+  .name-age {
+    margin-top: 60px;
+    gap: 15px;
+  }
+
+  .name,
+  .age {
+    font-size: 20px;
+  }
+
+  .city {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  .follow .number,
+  .likes .number,
+  .photos .number {
+    font-size: 18px;
+  }
+
+  .follow p,
+  .likes p,
+  .photos p {
+    font-size: 15px;
+  }
+}
